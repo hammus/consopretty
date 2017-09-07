@@ -1,6 +1,11 @@
 # Con-SO-Pretty! 
 > Node console.log sexification. 
 
+## Install
+```bash
+npm i conso-pretty
+```
+
 ## TL;DR
 Easy and extensible Node.js Console Coloring and Formatting. 
 Uses [RenderKid](https://github.com/AriaMinaei/RenderKid) to make your log *prinkle like diamond*.
