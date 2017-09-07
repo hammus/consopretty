@@ -7,9 +7,11 @@ const LEVELS = ["log", "debug", "warn", "error", "info"];
 
 export default class ConsoPretty {
 
+    
 
     constructor() {
         this._styles = defaultStyles;
+        this._isTimestamped = true;
         this._renderer = new RenderKid();
 
         this._oldStdOut = process.stdout;
@@ -29,9 +31,17 @@ export default class ConsoPretty {
             text,
             others
         } = ConsoPretty._parseContent([...arguments]);
-        let ts = moment.utc().format('YYYY-DD-MM hh:mm:ss');
+        let ts = `<ts>${moment.utc().format('YYYY-DD-MM hh:mm:ss')}</ts>`;
+        let key = `<key>${level.toUpperCase()}:</key>`
+        let markupText = "";
+        if(this._isTimestamped) {
+            markupText = `${ts}-${key} ${text}`;
+        } else {
+            markupText = `${key} ${text}`
+        }
         this._renderer.style(this._styles[level]);
-        return [this._renderer.render(`<ts>${ts}</ts>-<key>${level.toUpperCase()}:</key>${text}`), ...others];
+        
+        return [this._renderer.render(markupText), ...others];
 
     }
 
@@ -41,19 +51,44 @@ export default class ConsoPretty {
      */
     log(content) {
         let message = this.render("log", ...content);
+        _output("log", message);
     }
 
-    start(bind) {
+    _output(level, output) {
+        if (console.hasOwnProperty(level)) {
+            console[level](...output);
+        } else {
+            console.log(...output);
+        }
+    }
+
+    start(options) {
+        let {bind, timestamp, styles} = options;
+        
         if (bind) {
             this.bindConsole();
         }
+
+        if (typeof timestamp === "boolean" && !timestamp) {
+            this.toggleTimestamp();
+        }
+        return this;
+    }
+
+    toggleTimestamp() {
+        this._isTimestamped = !this._isTimestamped;
+    }
+
+    setStyle(userStyles) {
+        this._styles = Object.assign({}, defaultStyles, userStyles);
+        return this;
     }
 
     bindConsole() {
         var _this = this;
         LEVELS.forEach((level) => {
             let content;
-            if (console.hasOwnProperty(level)) {
+            if (console.hasOwnProperty(level) && typeof console[level] !== 'undefined' ) {
                 console[level] = function() {
                         content = _this.render(`${level}`, ...arguments);
                         _this._oldConsoles[level](...content);
@@ -64,6 +99,21 @@ export default class ConsoPretty {
                     content = _this.render(`${level}`, ...arguments);
                     _this._oldConsoles.log(...content);
                 };
+            }
+
+        });
+
+    }
+
+    resetConsole() {
+        var _this = this;
+        LEVELS.forEach((level) => {
+            let content;
+            if (this._oldConsoles.hasOwnProperty(level)) {
+                console[level] = this._oldConsoles[level];
+
+            } else {
+                delete console[level];
             }
 
         });
