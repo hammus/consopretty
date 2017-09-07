@@ -17,4 +17,4 @@ console.warn("Test Render", {test: 1, object: 2, for: "util"});
 ```
 ### Result
 
-[Example Output](/img/example.png?raw=true "Example Output")
+![Example Output](/img/example.png?raw=true "Example Output")
