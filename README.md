@@ -18,4 +18,4 @@ console.warn("Test Render", {test: 1, object: 2, for: "util"});
 ```
 ### Result
 
-![Example Output](/img/example.png?raw=true "Example Output")
+![Example Output](https://github.com/hammus/consopretty/raw/master/img/example.png?raw=true "Example Output")
