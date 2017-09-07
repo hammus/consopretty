@@ -1,6 +1,11 @@
 # Con-SO-Pretty! 
-> Add some *prinkle* to your logs!
+> Node console.log sexification. 
 
+##TL;DR
+Uses [RenderKid](https://github.com/AriaMinaei/RenderKid) to make your log *prinkle like diamond*.
+
+
+##Example
 ```javascript 
 let con = new ConsoPretty();
 con.start(true);
@@ -10,3 +15,5 @@ console.debug("Test Render", {test: 1, object: 2, for: "util"});
 console.info("Test Render", {test: 1, object: 2, for: "util"});
 console.warn("Test Render", {test: 1, object: 2, for: "util"});
 ```
+###Result
+[Example Output](/img/example.png?raw=true "Example Output")
