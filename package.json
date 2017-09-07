@@ -19,7 +19,6 @@
   "homepage": "https://github.com/hammus/conso-pretty#readme",
   "dependencies": {
     "moment": "^2.18.1",
-    "momentjs": "^2.0.0",
     "renderkid": "^2.0.1"
   },
   "devDependencies": {
