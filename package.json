@@ -1,0 +1,29 @@
+{
+  "name": "conso-pretty",
+  "version": "1.0.0",
+  "description": "Console Pretty Printing using RenderKid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node index.js || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hammus/conso-pretty.git"
+  },
+  "author": "Liam Whan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hammus/conso-pretty/issues"
+  },
+  "homepage": "https://github.com/hammus/conso-pretty#readme",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "momentjs": "^2.0.0",
+    "renderkid": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0"
+  }
+}
