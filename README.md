@@ -7,7 +7,7 @@ Uses [RenderKid](https://github.com/AriaMinaei/RenderKid) to make your log *prin
 
 ## Example
 ```javascript 
-let con = new ConsoPretty();
+const con = new ConsoPretty();
 con.start(true);
 console.log("Test Render", {test: 1, object: 2, for: "util"});
 console.error("Test Render", {test: 1, object: 2, for: "util"});
