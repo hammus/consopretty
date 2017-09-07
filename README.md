@@ -2,6 +2,7 @@
 > Node console.log sexification. 
 
 ## TL;DR
+Easy and extensible Node.js Console Coloring and Formatting. 
 Uses [RenderKid](https://github.com/AriaMinaei/RenderKid) to make your log *prinkle like diamond*.
 
 
