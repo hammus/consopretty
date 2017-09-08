@@ -4,7 +4,7 @@
   "description": "Console Pretty Printing using RenderKid",
   "main": "lib/index.js",
   "scripts": {
-    "test": "babel-node test/test.js || true",
+    "test": "npm run compile && babel-node test/test.js || true",
     "compile": "babel src --out-dir lib",
     "prepublish": "babel src --out-dir lib"
   },

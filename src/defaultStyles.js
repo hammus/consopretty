@@ -7,8 +7,11 @@ let defaultStyles = {
         },
         "key": {
             color: "bright-green",
-            marginRight: "1",
-            marginLeft: "1"
+            marginRight: "1"
+        },
+        "sep": {
+            color: "bright-green",
+            marginRight: "1"
         },
         "value": {
             color: "white"
@@ -22,7 +25,11 @@ let defaultStyles = {
         "key": {
             color: "bright-red",
             marginRight: "1",
-            marginLeft: "1"
+            
+        },
+        "sep": {
+            color: "bright-red",
+            marginRight: "1"
         },
         "value": {
             color: "white"
@@ -36,7 +43,11 @@ let defaultStyles = {
         "key": {
             color: "bright-yellow",
             marginRight: "1",
-            marginLeft: "1"
+            
+        },
+        "sep": {
+            color: "bright-yellow",
+            marginRight: "1"
         },
         "value": {
             color: "white"
@@ -50,7 +61,11 @@ let defaultStyles = {
         "key": {
             color: "bright-cyan",
             marginRight: "1",
-            marginLeft: "1"
+            
+        },
+        "sep": {
+            color: "bright-cyan",
+            marginRight: "1"
         },
         "value": {
             color: "white"
@@ -64,7 +79,11 @@ let defaultStyles = {
         "key": {
             color: "bright-blue",
             marginRight: "1",
-            marginLeft: "1"
+            
+        },
+        "sep": {
+            color: "bright-blue",
+            marginRight: "1"
         },
         "value": {
             color: "white"
