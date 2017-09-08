@@ -20,7 +20,6 @@ class ConsoPretty {
 
     }
 
-
     render() {
 
         let {
