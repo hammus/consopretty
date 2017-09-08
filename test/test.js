@@ -12,7 +12,7 @@ console.info("Test Render", {test: 1, object: 2, for: "util"});
 console.warn("Test Render", {test: 1, object: 2, for: "util"});
 
 //Return console object to its initial state
-con.resetConsole();
+con.restore();
 process.stdout.write("\nThe Following Should Render WITHOUT Styles\n");
 console.log("Test Render", {test: 1, object: 2, for: "util"});
 console.error("Test Render", {test: 1, object: 2, for: "util"});
@@ -32,6 +32,9 @@ con.setStyle({log: {
     },
     "value": {
         color: "white"
+    },
+    "sep": {
+        color: "bright-magenta"
     }
 }});
 
@@ -39,7 +42,7 @@ con.setStyle({log: {
 con.toggleTimestamp();
 
 //Rebind console
-con.bindConsole();
+con.bind();
 process.stdout.write("\nThe following should render without timestamp\n");
 console.log("Test Render", {test: 1, object: 2, for: "util"});
 console.error("Test Render", {test: 1, object: 2, for: "util"});
@@ -48,8 +51,8 @@ console.info("Test Render", {test: 1, object: 2, for: "util"});
 console.warn("Test Render", {test: 1, object: 2, for: "util"});
 
 //Test unbound outputs
-con.resetConsole();
-process.stdout.write("\nThe following are logged with an unbound console using this explicit cp methods\n");
+con.restore();
+process.stdout.write("\nThe following are logged with an unbound console. LOG Level\n");
 con.log("Test Render", {test: 1, object: 2, for: "util"});
 con.error("Test Render", {test: 1, object: 2, for: "util"});
 con.debug("Test Render", {test: 1, object: 2, for: "util"});

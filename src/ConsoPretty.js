@@ -87,7 +87,7 @@ class ConsoPretty {
         } = options;
 
         if (bind) {
-            this.bindConsole();
+            this.bind();
         }
 
         if (typeof timestamp === "boolean") {
@@ -105,7 +105,7 @@ class ConsoPretty {
         return this;
     }
 
-    bindConsole() {
+    bind() {
         var _this = this;
         LEVELS.forEach((level) => {
             let content;
@@ -126,7 +126,7 @@ class ConsoPretty {
 
     }
 
-    resetConsole() {
+    restore() {
         var _this = this;
         LEVELS.forEach((level) => {
             let content;
