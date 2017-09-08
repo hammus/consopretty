@@ -1,4 +1,4 @@
-import ConsoPretty from '../src/ConsoPretty'
+import ConsoPretty from '../lib/ConsoPretty'
 //Instantiate and bind to console object
 let con = new ConsoPretty();
 con.start({bind: true});

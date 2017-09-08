@@ -5,10 +5,7 @@ import util from 'util';
 
 const LEVELS = ["log", "debug", "warn", "error", "info"];
 
-export default class ConsoPretty {
-
-    
-
+class ConsoPretty {
     constructor() {
         this._styles = defaultStyles;
         this._isTimestamped = true;
@@ -150,3 +147,5 @@ export default class ConsoPretty {
         };
     }
 }
+
+module.exports = ConsoPretty;
