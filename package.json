@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hammus/conso-pretty.git"
+    "url": "git+https://github.com/hammus/consopretty.git"
   },
   "author": "Liam Whan",
   "license": "MIT",
