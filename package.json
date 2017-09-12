@@ -1,6 +1,6 @@
 {
   "name": "conso-pretty",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Console Pretty Printing using RenderKid",
   "main": "lib/index.js",
   "scripts": {
