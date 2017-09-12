@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run compile && babel-node test/test.js || true",
     "compile": "babel src --out-dir lib",
-    "prepublish": "babel src --out-dir lib"
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0"
+    "babel-preset-env": "^1.6.0",
+    "chai": "~1.9.2",
+    "mocha": "~2.0.1"
   }
 }

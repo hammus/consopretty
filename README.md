@@ -77,4 +77,34 @@ console.log("Test Render", {test: 1, object: 2, for: "util"});
 ### Outputs:
 ![Example Output](https://github.com/hammus/consopretty/raw/master/img/example2.png?raw=true "Example Output")
 ## 3. Styling
-### 
+```javascript
+cp.bind();
+cp.setStyle({
+    log: {
+        "ts": {
+            color: "magenta",
+            marginRight: "1"
+        },
+        "key": {
+            color: "bright-magenta",
+            marginRight: "1"
+        },
+        "value": {
+            color: "white"
+        },
+        "sep": {
+            color: "bright-magenta"
+        }
+    }
+});
+
+//Turn off timestamping
+cp.toggleTimestamp();
+
+//Rebind console
+console.log("Test Render", {test: 1, object: 2, for: "util"});
+console.error("Test Render", {test: 1, object: 2, for: "util"});
+console.debug("Test Render", {test: 1, object: 2, for: "util"});
+console.info("Test Render", {test: 1, object: 2, for: "util"});
+console.warn("Test Render", {test: 1, object: 2, for: "util"});
+```
