@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/conso-pretty.svg)](https://badge.fury.io/js/conso-pretty)
 # Con-SO-Pretty! 
 > Node console.log sexification. 
 
@@ -32,8 +33,9 @@ console.warn("Test Render", {test: 1, object: 2, for: "util"});
 # Usage
 There are 2 main methods ConsoPretty uses to output to the terminal:
 
-### 1. Bind to Console
-This is the one you'll probably use the most. Using this method, ConsoPretty overrides the native `console` object so you can just log the way you normally do. 
+## 1. Bind to Console
+This is probably the only thing 95% of users will need. Using this method, ConsoPretty overrides the native `console` object so you can just log the way you normally do.
+References to the original `console.[method]` functions are saved and can be restored later. \
 
 ### Example: Automatic Bind
 ```javascript 
@@ -61,13 +63,18 @@ console.warn("Test Render", {test: 1, object: 2, for: "util"});
 ```
 
 
-#### Restore original Console
+## 2. Restore original Console
 If for some reason you need to restore the original console, you can call the `restore()` method. 
+
+### Example
 ```javascript
 cp.bind();
 console.log("Test Render", {test: 1, object: 2, for: "util"});
 cp.restore();
 console.log("Test Render", {test: 1, object: 2, for: "util"});
-
 ```
 
+### Outputs:
+![Example Output](https://github.com/hammus/consopretty/raw/master/img/example2.png?raw=true "Example Output")
+## 3. Styling
+### 
