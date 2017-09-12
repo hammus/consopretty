@@ -67,3 +67,11 @@ con.error("Test Render", {test: 1, object: 2, for: "util"});
 con.debug("Test Render", {test: 1, object: 2, for: "util"});
 con.info("Test Render", {test: 1, object: 2, for: "util"});
 con.warn("Test Render", {test: 1, object: 2, for: "util"});
+
+// process.stdout.write("\n\nBind and then unbind methods\n")
+process.stdout.write("\n\n\n")
+con.resetStyles();
+con.bind();
+console.log("Test Render", {test: 1, object: 2, for: "util"});
+con.restore();
+console.log("Test Render", {test: 1, object: 2, for: "util"});

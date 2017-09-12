@@ -22,6 +22,8 @@ class ConsoPretty {
 
     }
 
+    
+
     render() {
 
         let {
@@ -103,6 +105,10 @@ class ConsoPretty {
     setStyle(userStyles) {
         this._styles = Object.assign({}, defaultStyles, userStyles);
         return this;
+    }
+    
+    resetStyles() {
+        this._styles = defaultStyles;
     }
 
     bind() {
